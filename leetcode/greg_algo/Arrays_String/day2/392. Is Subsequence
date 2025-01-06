@@ -1,0 +1,12 @@
+link-https://leetcode.com/problems/is-subsequence
+sol::
+class Solution:
+    def isSubsequence(self, s: str, t: str) -> bool:
+        i ,j = 0, 0
+        S=len(s)
+        T=len(t)
+        while i < S and j < T:
+            if s[i] == t[j]:
+                i += 1
+            j += 1
+        return i == S
